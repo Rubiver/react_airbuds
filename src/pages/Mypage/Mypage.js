@@ -202,11 +202,11 @@ const MusicWithTabs = () => {
         <Grid container>
             <Grid item className={styles.user_info} style={backgroundState}>
                 <Grid item md={2}>
-                    <Avatar alt="Remy Sharp" sx={{ width: 180, height: 180, marginLeft: 2 }} />
+                    <Avatar alt="Remy Sharp" sx={{ width: 180, height: 180, marginLeft: 2 }} src={profileImage} />
                 </Grid>
                 <Grid item md={7}>
                     <Box className={styles.target_id_container}>
-                        <Typography variant="h2" gutterBottom>
+                        <Typography variant="h2" gutterBottom style={{backgroundColor : "rgba(0,0,0,0)"}}>
                             {targetID}
                         </Typography>
                         <Typography variant="h5" gutterBottom>
@@ -254,33 +254,37 @@ const MusicWithTabs = () => {
                                 style: { backgroundColor: '#4CAF50' }  // 선택된 탭의 라벨 밑에 있는 줄의 색상
                             }}
                         >
-                            <Tab label="Tracks" component={Link} to="" {...a11yProps(0)}
+                            <Tab label="트랙" component={Link} to="" {...a11yProps(0)}
                                 sx={{
                                     '&.Mui-selected': {
                                         color: '#4CAF50',
                                         textDecoration: 'none', // 밑줄 제거
+                                        fontWeight: 'bold'
                                     },
                                     '&:hover': {
                                         color: '#4CAF50',
                                         textDecoration: 'none', // 밑줄 제거
                                     },
                                 }} />
-                            <Tab label="Albums" component={Link} to="albums" {...a11yProps(1)}
+                            <Tab label="앨범" component={Link} to="albums" {...a11yProps(1)}
                                 sx={{
                                     '&.Mui-selected': {
                                         color: '#4CAF50',
                                         textDecoration: 'none', // 밑줄 제거
+                                        fontWeight: 'bold'
                                     },
                                     '&:hover': {
                                         color: '#4CAF50',
                                         textDecoration: 'none', // 밑줄 제거
                                     },
                                 }} />
-                            <Tab label="Playlists" component={Link} to="playlists" {...a11yProps(2)}
+                            <Tab label="플레이리스트" component={Link} to="playlists" {...a11yProps(2)}
                                 sx={{
                                     '&.Mui-selected': {
                                         color: '#4CAF50',
                                         textDecoration: 'none', // 밑줄 제거
+                                        fontWeight: 'bold'
+
                                     },
                                     '&:hover': {
                                         color: '#4CAF50',
@@ -373,7 +377,7 @@ const MusicWithTabs = () => {
                                                         backgroundColor: '#4CAF50',
                                                     },
                                                 }}>
-                                                Edit
+                                                수정하기
                                             </Button>
                                         </Link>
                                         :
