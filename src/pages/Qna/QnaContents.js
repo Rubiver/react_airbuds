@@ -139,7 +139,7 @@ const QnaContents = () => {
 
     const downloadFile = (file) => {
         axios
-            .get(`/api/qna/download/${file.sys_name}`, {
+            .get(`/api/qna/download/${file.sysName}`, {
                 responseType: 'blob',
             })
             .then((response) => {
@@ -149,7 +149,7 @@ const QnaContents = () => {
                 // Create an anchor element for downloading the file
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = file.ori_name;
+                a.download = file.oriName;
                 document.body.appendChild(a);
                 a.click();
 
@@ -202,7 +202,7 @@ const QnaContents = () => {
                                 {files != null || files != undefined || files.length <= 0 
                                 ? files.map((e,i)=>{
                                     return(
-                                        <div key={i} onClick={()=>{downloadFile(e)}}>
+                                        <div key={i} onClick={() => downloadFile(e)} style={{ cursor: "pointer" }}>
                                             {e.oriName}
                                             <br/>
                                         </div>
