@@ -307,10 +307,6 @@ const Likes = () => {
                                             onClick={(e)=>{handleFavorite(track.trackId,myLikes.some(trackLike => trackLike.trackId === track.trackId),e)}}/>
                                             {countForTrack(track.trackId)}
                                         </div>
-                                        <div className={styles.share}>
-                                            <RepeatIcon />
-                                            368
-                                        </div>
                                     </div>
                                 </div>
                             ))}
